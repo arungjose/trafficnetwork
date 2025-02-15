@@ -1,1 +1,17 @@
+# Virtual environment
 venv/
+
+# Compiled files
+__pycache__/
+*.pyc
+
+# IDE/editor files
+.vscode/
+.idea/
+.DS_Store
+
+# Environment files
+.env
+
+# Logs
+*.log
