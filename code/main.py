@@ -1,6 +1,7 @@
 import cv2
 from ultralytics import YOLO
 from collections import defaultdict
+import time
 
 #Loading the YOLO model
 model = YOLO('yolo11n.pt')
@@ -29,13 +30,16 @@ class_list = model.names
 capture = cv2.VideoCapture('../dataset/traffic_stock (2).mp4')
 
 # Count Line Y-level
-line_y = 300
+line_y = 250
 
 #Dictionary to store object counts by class
 class_counts = defaultdict(int)
 
 # Dictionary to keep track of object IDs that have crossed the line
 crossed_ids = set()
+
+# Get the starting time when it runs
+start_time = time.time()
 
 while capture.isOpened():
     ret, frame = capture.read()
@@ -55,7 +59,7 @@ while capture.isOpened():
         confidences = results[0].boxes.conf.cpu()
 
     # To create a counting mark
-    cv2.line(frame, (10, line_y), (700, line_y), (0, 0, 255), 3)
+    cv2.line(frame, (50, line_y), (700, line_y), (0, 0, 255), 3)
 
     # Loop through each detected object
     for box, track_id, class_idx, conf in zip(boxes, track_ids, class_indices, confidences):
@@ -92,6 +96,16 @@ while capture.isOpened():
         
     # Video display
     cv2.imshow("YOLO tracking...", frame)
+
+    # To send the first count after 10secs
+    if time.time() - start_time >= 10:
+        # Open a file to save the data do far
+        f1 = open("vehicle_data.txt", "w")
+        # Loop to get every vehicle count
+        vehicle_data = {class_name : count for class_name, count in class_counts.items()}
+        f1.write(str(vehicle_data))
+       
+            
 
     #Key binding to quit --> q
     if cv2.waitKey(1) & 0xFF == ord('q'):
