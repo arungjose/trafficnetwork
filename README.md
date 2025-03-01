@@ -64,11 +64,11 @@ The project uses YOLO object detection for real-time vehicle detection and a fuz
    jupyter notebook
    ```
 
-5. **Open the folder code:**
+5. **Open the folder code and run the script:**
     ```bash
-    code/main.ipynb
+    cd code
+    python main.py
     ```
-6. **Now run each cell to run the model**
 
 ## Usage
 1. Upload video streams or connect live camera feeds for real-time traffic monitoring.
