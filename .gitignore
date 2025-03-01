@@ -21,3 +21,6 @@ ultralytics/
 
 #Jupyter notebook checkpoints
 .ipynb_checkpoints/
+
+#Model files
+*.pt
