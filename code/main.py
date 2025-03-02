@@ -100,7 +100,7 @@ while capture.isOpened():
     # To send the first count after 10secs
     if time.time() - start_time >= 10:
         # Open a file to save the data do far
-        f1 = open("vehicle_data.txt", "w")
+        f1 = open("lane1.txt", "w")
         # Loop to get every vehicle count
         vehicle_data = {class_name : count for class_name, count in class_counts.items()}
         f1.write(str(vehicle_data))
