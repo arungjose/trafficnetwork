@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Viewer</title>
+    <link rel="stylesheet" href="Home_style.css">
+</head>
+<body>
+    <div class="navbar">
+        <select id="district" onchange="updateTowns()">
+            <option selected disabled>Choose a District</option>
+            <option value="trivandrum">Trivandrum</option>
+            <option value="kollam">Kollam</option>
+            <option value="alappuzha">Alappuzha</option>
+        </select>
+        <select id="town">
+            <option value="">Choose a Town</option>
+        </select>
+        <button onclick="showContent()">View</button>
+    </div>
+
+    <div class="content" id="content">
+        <div class="left-panel">
+            <select id="lane" onchange="playVideo(); updateLaneDeltas(); cycleTrafficLights();">
+                <option selected disabled>Select a Lane</option>
+                <option value="lane1">Lane 1</option>
+                <option value="lane2">Lane 2</option>
+                <option value="lane3">Lane 3</option>
+                <option value="lane4">Lane 4</option>
+            </select>
+        </div>
+        <div class="right-panel">
+            <div class="video-container" id="videoContainer">
+                <video id="trafficVideo" width="640" height="480">
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="traffic-light-container">
+                <div class="traffic-light">
+                    <div id="stopLight" class="bulb"></div>
+                    <div id="slowLight" class="bulb"></div>
+                    <div id="goLight" class="bulb"></div>
+                  </div>
+                <table class="data-table">
+                    <tr>
+                        <th>Lane</th>
+                        <th>Delta</th>
+                    </tr>
+                    <tr>
+                        <td>Lane 1</td>
+                        <td id="laneone">0</td>
+                    </tr>
+                    <tr>
+                        <td>Lane 2</td>
+                        <td id="lanetwo">0</td>
+                    </tr>
+                    <tr>
+                        <td>Lane 3</td>
+                        <td id="lanethree">0</td>
+                    </tr>
+                    <tr>
+                        <td>Lane 4</td>
+                        <td id="lanefour">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="Home_js.js"></script>
+</body>
+</html>

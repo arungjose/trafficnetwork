@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    padding: 10px;
+    margin: 10px;
+    width: 80%;
+}
+
+.camera-buttons {
+    display: none;
+    margin-top: 20px;
+}
+
+.camera-buttons button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.camera-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.camera-view {
+    display: none;
+    margin-top: 20px;
+}
+
+.camera-view iframe {
+    width: 60%;
+    height: 300px;
+}
+
+.data-table {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}

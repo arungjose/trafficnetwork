@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Search Traffic Junction</h2>
+        <input type="text" id="location" placeholder="Enter location">
+        <button onclick="searchLocation()">Search</button>
+        <div class="camera-buttons" id="cameraButtons">
+            <button onclick="showCamera('Camera 1')">Camera 1</button>
+            <button onclick="showCamera('Camera 2')">Camera 2</button>
+            <button onclick="showCamera('Camera 3')">Camera 3</button>
+            <button onclick="showCamera('Camera 4')">Camera 4</button>
+        </div>
+    </div>
+
+    <div class="camera-view" id="cameraView">
+        <iframe id="cameraFeed" src=""></iframe>
+        <div class="data-table" id="dataTable">
+            <h3>Traffic Data</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Vehicle Count</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
