@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.navbar {
+    padding: 20px;
+    text-align: center;
+    background-image: url('Banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    margin: 0;
+    background-position: bottom;
+}
+
+.navbar select {
+    padding: 10px;
+    margin: 0 50px;
+    width: 200px;
+    background: #ffffff;
+    font-size: 16px;
+    border-radius: 10px;
+    outline: 0;
+    align-items: center;
+}
+
+.navbar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #0b40b3, #1eb0b5);
+    color: #fff;
+    border-radius: 10px;
+    outline: 0;
+    margin: 0;
+    border: 0;
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
+    margin-left: 50px;
+}
+
+button:hover {
+    background-position: 100% 0;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    transform: translateY(-10%);
+    overflow-y: hidden;
+}
+
+.left-panel {
+    width: 25%;
+    display: flex;
+    justify-content: center;   
+}
+
+.left-panel select {
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    background: #ffffff;
+    font-size: 22px;
+    border-radius: 10px;
+    outline: 0;
+    display: flex;
+    align-items: center;
+}
+
+.right-panel {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 640px;
+    margin-left: 20px;
+}
+
+.video-container {
+    width: 640px;
+    height: 480px;
+    background-color: #000000;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.traffic-light-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.traffic-light {
+    padding: 10px;
+    width: 80px;
+    height: 250px;
+    background-color: #333;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.bulb {
+    width: 60px;
+    height: 60px;
+    background-color: #111;
+    border-radius: 50%;
+    transition: background 500ms;
+}
+
+.data-table {
+    border-collapse: collapse;
+    width: 200px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #2a2d2a;   
+    padding: 8px;
+    text-align: center;
+}
+
+.data-table th {
+    background-color: #000000;
+    color: white;
+}

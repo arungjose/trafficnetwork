@@ -1,1 +1,1 @@
-{'car': 14, 'bus': 3, 'bicycle': 12}
+{'bus': 8, 'truck': 16, 'car': 3, 'bicycle': 12}

@@ -95,7 +95,7 @@ while capture.isOpened():
             y_offset += 30
         
     # Video display
-    cv2.imshow("YOLO tracking...", frame)
+    cv2.imshow("YOLO v11 tracking...", frame)
 
     # To send the first count after 10secs
     if time.time() - start_time >= 10:

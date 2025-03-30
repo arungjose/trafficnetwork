@@ -1,0 +1,1 @@
+{'motorcycle': 17, 'car': 18, 'bus': 14, 'bicycle': 21}

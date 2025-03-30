@@ -1,11 +1,11 @@
 # Client code --> Node B
 from socket import *
 from time import *
-filename= 'lane2.txt'
+filename= 'junc_b.txt'
 def readfile(filename):
     with open(filename, 'r') as file:
-        dict_str = file.read()
-        return(dict_str)    
+        data_read = file.read()
+        return(data_read)    
 client=socket()
 client.connect(('localhost',12000))
 print('connected to server ')    
