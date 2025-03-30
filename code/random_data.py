@@ -1,15 +1,15 @@
 import random
 
 # File pointers to write into file
-f1 =  open("code/lane2.txt", "w")
-f2 =  open("code/lane3.txt", "w")
-f3 =  open("code/lane4.txt", "w")
+f1 =  open("lane2.txt", "w")
+f2 =  open("lane3.txt", "w")
+f3 =  open("lane4.txt", "w")
 
 # Adjacent juntion lanes
-r1 =  open("code/t_lane1.txt", "w")
-r2 =  open("code/t_lane2.txt", "w")
-r3 =  open("code/t_lane3.txt", "w")
-r4 =  open("code/t_lane4.txt", "w")
+r1 =  open("t_lane1.txt", "w")
+r2 =  open("t_lane2.txt", "w")
+r3 =  open("t_lane3.txt", "w")
+r4 =  open("t_lane4.txt", "w")
 
 # Vehicle classs to choose from 
 vehicles = ['bicycle', 'car', 'motorcycle', 'bus', 'truck']
@@ -45,3 +45,5 @@ r1.close()
 r2.close()
 r3.close()
 r4.close()
+
+print("Count for all lanes are updated...")

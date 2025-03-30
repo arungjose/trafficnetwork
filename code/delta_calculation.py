@@ -58,7 +58,7 @@ del_dict = {}
 for i in range(4):
     fnum = i + 1
 
-    filename = "code/lane" + str(fnum) + ".txt"
+    filename = "lane" + str(fnum) + ".txt"
     key_lane = "lane" + str(fnum)
     
     delta_value = calculate_delta_value(filename)
@@ -66,7 +66,7 @@ for i in range(4):
     del_dict.update({key_lane : delta_value})
 
 
-with open('code/junc_a.txt', 'w') as f:
+with open('junc_a.txt', 'w') as f:
     f.write(str(del_dict))
 
 print("Delta values of Junction A calculated and stored in --junc_a.txt--")
@@ -76,7 +76,7 @@ del_dict = {}
 for i in range(4):
     fnum = i + 1
 
-    filename = "code/t_lane" + str(fnum) + ".txt"
+    filename = "t_lane" + str(fnum) + ".txt"
     key_lane = "lane" + str(fnum)
     
     delta_value = calculate_delta_value(filename)
@@ -84,7 +84,7 @@ for i in range(4):
     del_dict.update({key_lane : delta_value})
 
 
-with open('code/junc_b.txt', 'w') as f:
+with open('junc_b.txt', 'w') as f:
     f.write(str(del_dict))
 
 print("Delta values of Junction B calculated and stored in --junc_b.txt--")
