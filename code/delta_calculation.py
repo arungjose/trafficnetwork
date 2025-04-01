@@ -51,7 +51,7 @@ def calculate_delta_value(filename):
     
     delta_value = weighted_intranode + weighted_internode + weighted_time
     
-    return delta_value
+    return round(delta_value)
 
 del_dict = {}
 
