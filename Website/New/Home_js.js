@@ -112,16 +112,20 @@ function cycleTrafficLights() {
             console.log(`Changing to ${color}`);
 
             // Reset all lights
-            document.getElementById("goLight").style.background = "#111";
-            document.getElementById("slowLight").style.background = "#111";
-            document.getElementById("stopLight").style.background = "#111";
+            document.getElementById("goLight").className = "bulb";
+            document.getElementById("slowLight").className = "bulb";
+            document.getElementById("stopLight").className = "bulb";
+            // Remove any inline styles if they were set previously
+            document.getElementById("goLight").style.background = "";
+            document.getElementById("slowLight").style.background = "";
+            document.getElementById("stopLight").style.background = "";
 
             // Turn on the selected light
             if (color === "green") {
-                document.getElementById("goLight").style.background = "green";
+                document.getElementById("goLight").classList.add("green-active");
                 setTimeout(() => changeLight("yellow"), greenTime);
             } else if (color === "yellow") {
-                document.getElementById("slowLight").style.background = "yellow";
+                document.getElementById("slowLight").classList.add("yellow-active");
                 setTimeout(() => {
                     if (isGreenToRed) {
                         changeLight("red"); // Green → Yellow → Red
@@ -130,7 +134,7 @@ function cycleTrafficLights() {
                     }
                 }, yellowTime);
             } else if (color === "red") {
-                document.getElementById("stopLight").style.background = "red";
+                document.getElementById("stopLight").classList.add("red-active");
                 setTimeout(() => {
                     isGreenToRed = !isGreenToRed; // Toggle direction
                     changeLight("yellow");
